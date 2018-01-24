@@ -32,6 +32,9 @@ export default class Blocks extends React.Component {
 	}
 
 	editBlock(id, title, color) {
+		if(title.length > 13) {
+
+		}
 		this.props.edit(id, title, color)
 		this.setState({
 			isShow: !this.state.isShow
@@ -39,7 +42,7 @@ export default class Blocks extends React.Component {
 	}
 
 	getStatic(id, title, color) {
-		return <div onClick={this.handleSwap.bind(this)} style={Object.assign({}, styleBlock.base, styleBlock.bgc)}>{title}</div>
+		return <div onClick={this.handleSwap.bind(this)} style={Object.assign({}, styleBlock.base, styleBlock.bgc)}><p>{title}</p></div>
 	}
 
 	getEdit(id, title, color) {
