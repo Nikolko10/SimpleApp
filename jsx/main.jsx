@@ -72,7 +72,6 @@ export default class Main extends React.Component {
 				item.color = color;
 			}
 		});
-		console.log(newData)
 		this.setState({
 			data: newData
 		})

@@ -53,7 +53,6 @@ export default class Blocks extends React.Component {
 
 	render() {
 		const { id, title, color } = this.props
-		console.log(this.props)
 		styleBlock.bgc['backgroundColor'] = color;
 		return this.state.isShow === false ? this.getStatic(id, title, color) : this.getEdit(id, title, color)
 	}
